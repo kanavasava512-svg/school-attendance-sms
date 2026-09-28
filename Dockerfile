@@ -4,7 +4,7 @@ WORKDIR /app
 
 # ZIP file is kept in the GitHub repository.
 RUN apk add --no-cache unzip
-
+RUN apk add --no-cache unzip openssl
 COPY school-attendance-sms.zip /tmp/school-attendance-sms.zip
 
 # Extract the Claude-generated project. The ZIP contains a top-level school-sms folder.
