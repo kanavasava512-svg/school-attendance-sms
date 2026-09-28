@@ -21,4 +21,4 @@ ENV PORT=3000
 EXPOSE 3000
 
 # Apply Prisma migrations when the container starts, then start Next.js.
-CMD ["sh", "-c", "npx prisma migrate deploy && npm start"]
+CMD ["sh", "-c", "npx prisma db push --accept-data-loss && npm start"]
